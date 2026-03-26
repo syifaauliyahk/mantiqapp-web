@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <title>MantiqApp</title>
+  <link rel="stylesheet" href="css/style.css"/>
+</head>
+<body>
+
+<!-- ══ NAVBAR ══════════════════════════════════ -->
+<nav class="navbar">
+  <div class="nav-brand">
+    <span class="brand-icon">&#9670;</span>
+    <span class="brand-text">MantiqApp</span>
+  </div>
+  <ul class="nav-links">
+    <li><button class="nav-btn active" data-target="beranda">Beranda</button></li>
+    <li><button class="nav-btn" data-target="materi">Materi</button></li>
+    <li><button class="nav-btn" data-target="kalkulator">Kalkulator</button></li>
+    <li><button class="nav-btn" data-target="validator">Validator</button></li>
+    <li><button class="nav-btn" data-target="kuis">Kuis</button></li>
+  </ul>
+  <button class="nav-toggle" id="navToggle">&#9776;</button>
+</nav>
+
+<main class="main-content">
+
+<!-- ══ BERANDA ═════════════════════════════════ -->
+<section id="beranda" class="section active">
+  <div class="hero">
+
+    <!-- Teks kiri -->
+    <div class="hero-left">
+      <h1 class="hero-title">Selamat Datang di<br>MantiqApp</h1>
+      <p class="hero-subtitle">Pelajari Ilmu Mantiq dengan cara yang sederhana dan mudah dipahami.</p>
+      <div class="hero-buttons">
+        <button class="btn-primary" onclick="navigateTo('materi')">Mulai Belajar</button>
+        <button class="btn-secondary" onclick="navigateTo('kuis')">Coba Kuis</button>
+      </div>
+    </div>
+
+    <!-- Ilustrasi kanan -->
+    <div class="hero-right">
+      <img src="ilustrasi.png"
+         alt="Ilustrasi Ilmu Mantiq"
+         style="width:100%; max-width:460px; max-height:380px; height:auto; object-fit:contain;" />
+    </div>
+  </div>
+
+  <!-- Feature cards -->
+  <div class="feature-grid">
+    <div class="feature-card" onclick="navigateTo('materi')">
+      <div class="feature-icon">&#128218;</div>
+      <h3>Materi Dasar</h3>
+      <p>Penjelasan Ilmu Mantiq dasar dengan bahasa yang mudah dipahami.</p>
+      <span class="feature-link">Baca Materi &#8594;</span>
+    </div>
+    <div class="feature-card" onclick="navigateTo('kalkulator')">
+      <div class="feature-icon">&#129518;</div>
+      <h3>Kalkulator Silogisme</h3>
+      <p>Masukkan dua pernyataan, dan aplikasi akan menarik kesimpulan secara otomatis.</p>
+      <span class="feature-link">Coba Sekarang &#8594;</span>
+    </div>
+    <div class="feature-card" onclick="navigateTo('validator')">
+      <div class="feature-icon">&#128270;</div>
+      <h3>Validator Proposisi</h3>
+      <p>Ketik sebuah pernyataan, dan aplikasi akan mendeteksi jenis proposisinya secara otomatis.</p>
+      <span class="feature-link">Coba Validasi &#8594;</span>
+    </div>
+    <div class="feature-card" onclick="navigateTo('kuis')">
+      <div class="feature-icon">&#127942;</div>
+      <h3>Kuis</h3>
+      <p>Uji pemahaman Anda tentang Ilmu Mantiq melalui 10 soal pilihan ganda.</p>
+      <span class="feature-link">Mulai Kuis &#8594;</span>
+    </div>
+  </div>
+</section>
+
+<!-- ══ MATERI ═══════════════════════════════════ -->
+<section id="materi" class="section">
+  <div class="page-header">
+    <h2 class="page-title">Materi Ilmu Mantiq</h2>
+    <p class="page-desc">Pilih topik yang ingin Anda pelajari</p>
+  </div>
+
+  <div class="materi-tabs">
+    <button class="tab-btn active" data-tab="tab-apa">Apa itu Mantiq?</button>
+    <button class="tab-btn" data-tab="tab-tasawwur">Tasawwur &amp; Tashdiq</button>
+    <button class="tab-btn" data-tab="tab-dilalah">Dilalah</button>
+    <button class="tab-btn" data-tab="tab-proposisi">Jenis Proposisi</button>
+    <button class="tab-btn" data-tab="tab-qiyas">Qiyas</button>
+    <button class="tab-btn" data-tab="tab-sesat">Kekeliruan Berpikir</button>
+  </div>
+
+  <!-- Tab 1: Apa itu Mantiq -->
+  <div id="tab-apa" class="tab-content active">
+    <div class="materi-card">
+      <div class="materi-card-header"><span class="materi-icon">&#128161;</span><h3>Apa itu Ilmu Mantiq?</h3></div>
+      <p>Pernahkah Anda berdebat dengan seseorang, tetapi akhirnya justru bingung sendiri? Atau merasa yakin bahwa kesimpulan Anda sudah benar, namun ternyata ada yang keliru dari cara berpikir Anda? Di sinilah peran <strong>Ilmu Mantiq</strong> menjadi penting.</p>
+      <div class="info-box"><strong>Sederhananya:</strong> Ilmu Mantiq adalah <em>panduan berpikir yang benar dan sistematis</em>. Seperti rambu lalu lintas yang mencegah kita melanggar aturan jalan, Ilmu Mantiq mencegah kita dari kesalahan dalam bernalar.</div>
+      <p>Kata <strong>"Mantiq"</strong> berasal dari bahasa Arab yang berarti <em>berpikir</em> atau <em>berkata dengan benar</em>. Dalam tradisi Barat, ilmu ini dikenal sebagai <strong>Logika</strong>, dari bahasa Yunani <em>logos</em> yang berarti pikiran atau akal.</p>
+      <p>Ilmuwan besar Ibnu Sina pernah menyatakan: <em>"Ilmu Mantiq adalah alat yang memuat kaidah-kaidah untuk menjaga akal manusia dari ketergelinciran dalam berpikir."</em> Sementara itu, Al-Ghazali menegaskan bahwa seseorang yang tidak menguasai logika, maka otoritas keilmuannya patut dipertanyakan.</p>
+      <h4>Mengapa Ilmu Mantiq Perlu Dipelajari?</h4>
+      <div class="example-box"><strong>Perhatikan situasi berikut ini:</strong><ul>
+        <li>Anda membaca sebuah berita di media sosial, lalu langsung mempercayainya tanpa memverifikasi kebenarannya terlebih dahulu.</li>
+        <li>Seseorang menyatakan bahwa "semua politisi itu korup" hanya karena melihat satu kasus — ini merupakan generalisasi yang tidak tepat.</li>
+        <li>Anda merasa argumen Anda sudah kuat, padahal premis yang digunakan tidak saling berkaitan.</li>
+      </ul>Seluruh kesalahan di atas dapat dihindari apabila kita memahami cara berpikir yang benar dan terstruktur.</div>
+      <h4>Manfaat Mempelajari Ilmu Mantiq</h4>
+    <div class="proposisi-grid">
+      <div class="proposisi-card tipe-i">
+        <span style="font-size:2rem; display:block; margin-bottom:0.6rem;">&#128736;</span>
+        <h4>Berpikir Lebih Tajam</h4>
+        <p>Melatih akal agar tidak mudah terpengaruh emosi atau prasangka saat mengambil keputusan.</p>
+      </div>
+      <div class="proposisi-card tipe-a">
+        <span style="font-size:2rem; display:block; margin-bottom:0.6rem;">&#128270;</span>
+        <h4>Tidak Mudah Tertipu</h4>
+        <p>Mampu mendeteksi argumen yang tampak benar, tetapi sebenarnya mengandung kekeliruan logika.</p>
+      </div>
+      <div class="proposisi-card tipe-e">
+        <span style="font-size:2rem; display:block; margin-bottom:0.6rem;">&#128173;</span>
+        <h4>Berdiskusi Lebih Efektif</h4>
+        <p>Memahami cara menyusun argumen yang kuat dan merespons argumen lawan secara tepat.</p>
+      </div>
+      <div class="proposisi-card tipe-o">
+        <span style="font-size:2rem; display:block; margin-bottom:0.6rem;">&#127891;</span>
+        <h4>Fondasi Semua Ilmu</h4>
+        <p>Ilmu Mantiq menjadi jembatan bagi semua disiplin ilmu, mulai dari fiqh, filsafat, hingga sains.</p>
+    </div>
+  </div>
+  </div>
+  </div>
+
+  <!-- Tab 2: Tasawwur & Tashdiq -->
+  <div id="tab-tasawwur" class="tab-content">
+    <div class="materi-card">
+      <div class="materi-card-header"><span class="materi-icon">&#129504;</span><h3>Tasawwur &amp; Tashdiq</h3></div>
+      <p>Dalam Ilmu Mantiq, akal manusia bekerja melalui dua tahap yang saling berkaitan. Memahami keduanya akan membantu kita mengerti bagaimana pikiran kita sebenarnya memproses sebuah informasi.</p>
+      <div class="info-box"><strong>Analogi:</strong> Bayangkan Anda ingin menyusun sebuah kalimat. Anda harus memahami makna setiap kata terlebih dahulu sebelum dapat merangkainya menjadi kalimat yang utuh. <strong>Tasawwur</strong> adalah tahap "memahami kata", sedangkan <strong>Tashdiq</strong> adalah tahap "merangkai kalimat" tersebut.</div>
+
+      <h4>Tasawwur — Membentuk Konsep</h4>
+      <p><strong>Tasawwur</strong> adalah proses ketika akal membentuk gambaran atau konsep tentang sesuatu, <em>tanpa</em> memberikan penilaian benar atau salah. Pada tahap ini, akal hanya "melihat" dan "membayangkan" sesuatu.</p>
+      <div class="example-box"><strong>Contoh Tasawwur:</strong><ul>
+        <li>Ketika mendengar kata <em>"apel"</em>, secara otomatis muncul gambaran buah berwarna merah atau hijau dalam pikiran Anda — itulah tasawwur.</li>
+        <li>Ketika mendengar kata <em>"manusia"</em>, Anda membayangkan makhluk berakal dan berbudi — itulah tasawwur.</li>
+        <li>Pada tahap ini, Anda belum menilai apakah apel itu enak atau tidak — Anda hanya membayangkan wujudnya.</li>
+      </ul></div>
+
+      <h4>Tashdiq — Memberikan Penilaian</h4>
+      <p><strong>Tashdiq</strong> adalah proses ketika akal mulai <em>memberikan penilaian</em> terhadap sesuatu, apakah pernyataan itu benar atau salah. Tashdiq selalu didahului oleh tasawwur — Anda tidak dapat menilai sesuatu yang belum Anda pahami konsepnya.</p>
+      <div class="example-box"><strong>Contoh Tashdiq:</strong><ul>
+        <li><span class="badge-benar">BENAR</span> "Apel adalah buah-buahan."</li>
+        <li><span class="badge-salah">SALAH</span> "Apel adalah sayuran."</li>
+        <li><span class="badge-benar">BENAR</span> "Semua manusia pasti mengalami kematian."</li>
+      </ul></div>
+      <div class="info-box"><strong>Penting untuk diingat:</strong> Tasawwur merupakan syarat mutlak sebelum Tashdiq. Anda tidak dapat menilai apakah "apel itu buah atau bukan" sebelum Anda memahami apa itu apel dan apa itu buah.</div>
+    </div>
+  </div>
+
+  <!-- Tab 3: Dilalah -->
+  <div id="tab-dilalah" class="tab-content">
+    <div class="materi-card">
+      <div class="materi-card-header"><span class="materi-icon">&#128270;</span><h3>Dilalah</h3></div>
+      <p>Pernahkah Anda mencium aroma masakan dari kejauhan, lalu langsung mengetahui bahwa ada orang yang sedang memasak di dekat situ? Proses inilah yang dalam Ilmu Mantiq disebut <strong>Dilalah</strong>.</p>
+      <div class="info-box"><strong>Pengertian:</strong> Dilalah adalah proses memahami sesuatu <em>melalui</em> sesuatu yang lain. Sesuatu yang memberikan petunjuk disebut <strong>dall</strong> (tanda/penunjuk), sedangkan sesuatu yang ditunjukkannya disebut <strong>madlul</strong> (makna/yang ditunjuk).</div>
+      <div class="example-box"><strong>Contoh Dilalah dalam Kehidupan Sehari-hari:</strong><ul>
+        <li>&#128163; <strong>Asap</strong> (dall) → menunjukkan adanya <strong>api</strong> (madlul).</li>
+        <li>&#128680; <strong>Lampu merah</strong> (dall) → berarti <strong>berhenti</strong> (madlul).</li>
+        <li>&#128293; <strong>Wajah merah padam</strong> → menunjukkan seseorang sedang <strong>marah atau malu</strong>.</li>
+        <li>&#9729; <strong>Awan mendung yang gelap</strong> → menandakan <strong>akan turun hujan</strong>.</li>
+      </ul></div>
+      <h4>Macam-Macam Dilalah</h4>
+        <div class="tipe-grid">
+        <div class="tipe-ref tipe-e" style="flex-direction:column; text-align:center; align-items:center;">
+          <span style="font-size:2rem; margin-bottom:8px;">&#129504;</span>
+          <div><strong>Melalui Akal (Aqliyyah)</strong><br><small>Dipahami melalui proses penalaran. Contoh: alam semesta terus berubah → pasti ada Pencipta yang menggerakkannya.</small></div>
+        </div>
+        <div class="tipe-ref tipe-a" style="flex-direction:column; text-align:center; align-items:center;">
+          <span style="font-size:2rem; margin-bottom:8px;">&#127807;</span>
+          <div><strong>Secara Alami (Thabi'iyyah)</strong><br><small>Terjadi secara spontan dan alami tanpa perlu berpikir. Contoh: seseorang menangis → sedang bersedih.</small></div>
+        </div>
+        <div class="tipe-ref tipe-i" style="flex-direction:column; text-align:center; align-items:center;">
+          <span style="font-size:2rem; margin-bottom:8px;">&#129309;</span>
+          <div><strong>Berdasarkan Kesepakatan (Wadh'iyyah)</strong><br><small>Tanda yang dibentuk atas dasar kesepakatan bersama. Contoh: bendera kuning di depan rumah → ada anggota keluarga yang meninggal dunia.</small></div>
+        </div>
+        </div>
+    </div>
+  </div>
+
+  <!-- Tab 4: Proposisi -->
+  <div id="tab-proposisi" class="tab-content">
+    <div class="materi-card">
+      <div class="materi-card-header"><span class="materi-icon">&#128196;</span><h3>Proposisi</h3></div>
+      <p>Dalam Ilmu Mantiq, tidak semua kalimat dapat disebut proposisi. <strong>Proposisi (Qadhiyyah)</strong> adalah pernyataan yang dapat dinilai <em>benar atau salah</em>. Kalimat tanya dan kalimat perintah bukan termasuk proposisi karena tidak dapat dinilai benar atau salahnya.</p>
+      <div class="info-box">
+        <strong>Contoh Proposisi:</strong><br>
+        &bull; "Semua manusia membutuhkan makan." ✓<br>
+        &bull; "Kucing adalah hewan." ✓<br><br>
+
+        <strong>Bukan Proposisi:</strong><br>
+        &bull; "Tolong ambilkan air!" ✗<br>
+        &bull; "Bagaimana kabar Anda?" ✗
+      </div>
+      <h4>Tiga Unsur dalam Setiap Proposisi</h4>
+      <div class="example-box"><strong>Contoh: "Zaid sedang berdiri."</strong><ul>
+        <li><strong>Subjek (Maudhu')</strong> = Zaid — pihak yang menjadi pokok pernyataan.</li>
+        <li><strong>Predikat (Mahmul)</strong> = berdiri — hal yang dinyatakan tentang subjek.</li>
+        <li><strong>Penghubung (Rabithah)</strong> = sedang — kata yang menghubungkan subjek dan predikat.</li>
+      </ul></div>
+      <h4>Empat Jenis Proposisi</h4>
+      <p>Proposisi diklasifikasikan berdasarkan dua dimensi: <strong>kuantitas</strong> (semua atau sebagian?) dan <strong>kualitas</strong> (positif atau negatif?). Kombinasi keduanya menghasilkan empat jenis proposisi:</p>
+      <div class="proposisi-grid">
+        <div class="proposisi-card tipe-a"><div class="tipe-badge">A</div><h4>Kulliyyah Mujibah</h4><p>Universal Afirmatif</p><em>"Semua manusia membutuhkan makan."</em><div class="kata-kunci">semua, setiap, seluruh</div></div>
+        <div class="proposisi-card tipe-e"><div class="tipe-badge">E</div><h4>Kulliyyah Salibah</h4><p>Universal Negatif</p><em>"Tidak ada manusia yang hidup abadi."</em><div class="kata-kunci">tidak ada, tiada, tak satu pun</div></div>
+        <div class="proposisi-card tipe-i"><div class="tipe-badge">I</div><h4>Juz'iyyah Mujibah</h4><p>Parsial Afirmatif</p><em>"Sebagian hewan dapat terbang."</em><div class="kata-kunci">sebagian, beberapa, ada yang</div></div>
+        <div class="proposisi-card tipe-o"><div class="tipe-badge">O</div><h4>Juz'iyyah Salibah</h4><p>Parsial Negatif</p><em>"Sebagian burung tidak dapat terbang."</em><div class="kata-kunci">sebagian...tidak, beberapa...bukan</div></div>
+      </div>
+      <h4>Tanaqudh — Dua Proposisi yang Saling Bertentangan</h4>
+      <p><strong>Tanaqudh</strong> (kontradiksi) terjadi ketika dua proposisi memiliki subjek dan predikat yang sama, namun satu bersifat universal-positif dan yang lainnya parsial-negatif (atau sebaliknya). Akibatnya, salah satu proposisi pasti benar dan yang lainnya pasti salah.</p>
+      <div class="example-box"><strong>Pasangan Tanaqudh:</strong><ul>
+        <li>"<strong>Semua</strong> manusia adalah makhluk hidup." ↔ "<strong>Sebagian</strong> manusia <strong>bukan</strong> makhluk hidup." (A ↔ O)</li>
+        <li>"<strong>Sebagian</strong> bangsa telah merdeka." ↔ "<strong>Tidak ada</strong> bangsa yang telah merdeka." (I ↔ E)</li>
+      </ul>Kedua proposisi tersebut tidak dapat benar sekaligus, dan tidak dapat salah sekaligus.</div>
+    </div>
+  </div>
+
+  <!-- Tab 5: Qiyas -->
+  <div id="tab-qiyas" class="tab-content">
+    <div class="materi-card">
+      <div class="materi-card-header"><span class="materi-icon">&#129302;</span><h3>Qiyas</h3></div>
+      <p><strong>Qiyas (Silogisme)</strong> adalah proses menarik kesimpulan baru dari dua pernyataan yang telah ada. Apabila kedua pernyataan awal tersebut benar, maka kesimpulan yang dihasilkan pasti benar.</p>
+      <div class="info-box"> <strong>Analogi:</strong> Bayangkan dua potongan puzzle yang sudah saling cocok. Secara otomatis, gambar ketiganya akan terbentuk dengan sendirinya. Qiyas bekerja dengan cara yang sama — dari dua informasi yang tepat, kesimpulan terbentuk secara logis dan otomatis.</div>
+      <div class="qiyas-diagram">
+        <div class="qiyas-box premis-mayor"><span class="qiyas-label">Premis Mayor — Pernyataan Umum</span><span class="qiyas-text">Semua manusia pasti mengalami kematian.</span></div>
+        <div class="qiyas-plus">+</div>
+        <div class="qiyas-box premis-minor"><span class="qiyas-label">Premis Minor — Pernyataan Khusus</span><span class="qiyas-text">Socrates adalah manusia.</span></div>
+        <div class="qiyas-arrow">&#8595;</div>
+        <div class="qiyas-box kesimpulan"><span class="qiyas-label">Kesimpulan (Natijah) — Terbentuk Otomatis</span><span class="qiyas-text">Socrates pasti mengalami kematian. &#10003;</span></div>
+      </div>
+      <h4>Kunci Keberhasilan Qiyas: Term Tengah (Had Awsath)</h4>
+      <div class="example-box"><strong>Penjelasan:</strong><ul>
+        <li>Premis Mayor: "Semua <u>manusia</u> pasti mengalami kematian." — kata <u>manusia</u> adalah term tengah.</li>
+        <li>Premis Minor: "Socrates adalah <u>manusia</u>." — kata <u>manusia</u> muncul kembali di sini.</li>
+        <li>Kesimpulan: "Socrates pasti mengalami kematian." — kata <u>manusia</u> tidak muncul lagi di kesimpulan.</li>
+      </ul>Apabila tidak ada kata penghubung yang menghubungkan kedua premis, maka silogisme menjadi tidak valid.</div>
+      <h4>Empat Metode Penarikan Kesimpulan</h4>
+      <div class="tipe-grid">
+
+        <div class="tipe-ref tipe-a" style="flex-direction:column; align-items:center; text-align:center;">
+          <div style="font-size:1.8rem; margin-bottom:6px;">🧠</div>
+          <div>
+            <strong>Deduktif (Qiyas Mantiqi)</strong><br>
+            <small>Dari umum ke khusus. Semua logam menghantarkan listrik → tembaga adalah logam → tembaga menghantarkan listrik.</small>
+          </div>
+        </div>
+
+        <div class="tipe-ref tipe-i" style="flex-direction:column; align-items:center; text-align:center;">
+          <div style="font-size:1.8rem; margin-bottom:6px;">🔍</div>
+          <div>
+            <strong>Induktif (Istiqra')</strong><br>
+            <small>Dari khusus ke umum. Manusia, sapi, kuda — semua bergerak rahang bawahnya saat makan → semua hewan demikian.</small>
+          </div>
+        </div>
+
+        <div class="tipe-ref tipe-e" style="flex-direction:column; align-items:center; text-align:center;">
+          <div style="font-size:1.8rem; margin-bottom:6px;">⚖️</div>
+          <div>
+            <strong>Analogi (Qiyas Tamtsili)</strong><br>
+            <small>Menyamakan hukum dua hal karena terdapat kesamaan sifat. Tuak disamakan dengan khamar karena sama-sama memabukkan → tuak hukumnya haram.</small>
+          </div>
+        </div>
+
+        <div class="tipe-ref tipe-o" style="flex-direction:column; align-items:center; text-align:center;">
+          <div style="font-size:1.8rem; margin-bottom:6px;">🔗</div>
+          <div>
+            <strong>Berantai (Qiyas Murakkab)</strong><br>
+            <small>Kesimpulan dari satu qiyas dijadikan premis bagi qiyas berikutnya, dan seterusnya seperti rantai yang saling terhubung.</small>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- Tab 6: Kekeliruan Berpikir -->
+  <div id="tab-sesat" class="tab-content">
+    <div class="materi-card">
+      <div class="materi-card-header"><span class="materi-icon">&#128683;</span><h3>Kekeliruan Berpikir</h3></div>
+      <p>Ilmu Mantiq juga mengajarkan kita untuk mengenali <strong>kesalahan-kesalahan umum dalam berpikir</strong> yang disebut <em>fallacy</em>. Banyak di antara kita tanpa sadar melakukan kesalahan ini dalam kehidupan sehari-hari.</p>
+      <h4>Faktor-Faktor Penyebab Kesalahan Berpikir</h4>
+      <div class="example-box"><ul>
+        <li>&#9889; <strong>Tergesa-gesa dalam mengambil kesimpulan</strong> — belum semua fakta terkumpul, namun sudah langsung membuat penilaian.</li>
+        <li>&#129300; <strong>Terlalu mudah mempercayai informasi</strong> — menerima suatu berita atau pernyataan tanpa terlebih dahulu memverifikasi kebenarannya.</li>
+        <li>&#129354; <strong>Fanatisme golongan</strong> — mempertahankan pendapat semata-mata karena itu adalah pendapat kelompok sendiri, bukan karena dalil yang kuat.</li>
+        <li>&#128149; <strong>Mengikuti hawa nafsu</strong> — menarik kesimpulan berdasarkan keinginan atau perasaan, bukan berdasarkan fakta dan logika.</li>
+      </ul></div>
+      <h4>Jenis-Jenis Kekeliruan Logika (Fallacy) yang Umum Terjadi</h4>
+<div class="tipe-grid">
+
+  <div class="tipe-ref tipe-e" style="flex-direction:column; align-items:center; text-align:center;">
+    <div style="font-size:1.8rem; margin-bottom:6px;">⚠️</div>
+    <div>
+      <strong>Empat Term (Four Terms)</strong><br>
+      <small>"Penyakit panu dapat menular → penderita panu harus diasingkan." Kata 'menular' digunakan dengan dua pengertian yang berbeda dalam satu argumen.</small>
+    </div>
+  </div>
+
+  <div class="tipe-ref tipe-a" style="flex-direction:column; align-items:center; text-align:center;">
+    <div style="font-size:1.8rem; margin-bottom:6px;">📊</div>
+    <div>
+      <strong>Generalisasi Terburu-buru</strong><br>
+      <small>"Dia orang Medan dan bersikap keras, berarti semua orang Medan bersikap keras." Satu contoh tidak cukup untuk membuat kesimpulan umum.</small>
+    </div>
+  </div>
+
+  <div class="tipe-ref tipe-i" style="flex-direction:column; align-items:center; text-align:center;">
+    <div style="font-size:1.8rem; margin-bottom:6px;">🎤</div>
+    <div>
+      <strong>Argumen Berdasarkan Otoritas</strong><br>
+      <small>"Sampo ini berkualitas baik karena direkomendasikan oleh artis terkenal." Seorang artis bukanlah ahli kimia atau kesehatan — pendapatnya berada di luar bidang keahliannya.</small>
+    </div>
+  </div>
+
+  <div class="tipe-ref tipe-o" style="flex-direction:column; align-items:center; text-align:center;">
+    <div style="font-size:1.8rem; margin-bottom:6px;">💔</div>
+    <div>
+      <strong>Mengundang Belas Kasihan</strong><br>
+      <small>"Mohon dihukum lebih ringan karena saya adalah yatim piatu." Kondisi pribadi seseorang tidak relevan sebagai dasar penilaian atas suatu tindakan.</small>
+    </div>
+  </div>
+
+</div>
+      <div class="info-box" style="margin-top:1rem"> <strong>Tips Praktis:</strong> Setiap kali Anda menerima suatu argumen, tanyakan kepada diri sendiri: "Apakah premisnya benar? Apakah kesimpulannya benar-benar mengikuti dari premis tersebut?" Dua pertanyaan sederhana ini sudah cukup untuk menyaring sebagian besar kekeliruan dalam berpikir.</div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ KALKULATOR ════════════════════════════════ -->
+<section id="kalkulator" class="section">
+  <div class="page-header">
+    <h2 class="page-title">Kalkulator Silogisme</h2>
+    <p class="page-desc">Masukkan dua pernyataan — sistem akan menarik kesimpulan secara otomatis</p>
+  </div>
+  <div class="tool-container">
+    <div class="tool-form">
+      <div class="form-group">
+        <label class="form-label">Premis Mayor <span class="label-hint">(pernyataan umum)</span></label>
+        <input type="text" id="premisMayor" class="form-input" placeholder="Contoh: Semua manusia adalah makhluk fana"/>
+        <span class="input-hint">Pola: Semua / Setiap [subjek] [kata kerja] [predikat]</span>
+      </div>
+      <div class="form-group">
+        <label class="form-label">Premis Minor <span class="label-hint">(pernyataan khusus)</span></label>
+        <input type="text" id="premisMinor" class="form-input" placeholder="Contoh: Ali adalah manusia"/>
+        <span class="input-hint">Pola: [nama/benda] adalah/merupakan [subjek dari premis mayor]</span>
+      </div>
+      <div class="form-actions">
+        <button class="btn-primary" onclick="prosesQiyas()">Tarik Kesimpulan</button>
+        <button class="btn-ghost" onclick="resetKalkulator()">Reset</button>
+      </div>
+    </div>
+    <div id="hasilQiyas" class="hasil-box hidden">
+      <div class="hasil-header"><span id="hasilIcon" class="hasil-icon"></span><span id="hasilLabel" class="hasil-label"></span></div>
+      <div id="hasilTeks" class="hasil-teks"></div>
+      <div id="hasilDetail" class="hasil-detail"></div>
+    </div>
+    <div class="contoh-section">
+      <h4 class="contoh-title">Klik salah satu contoh di bawah untuk mencoba langsung:</h4>
+      <div class="contoh-grid">
+        <div class="contoh-item" onclick="isiContoh('Semua manusia adalah makhluk fana','Ali adalah manusia')"><strong>Manusia &amp; Kematian</strong><p>Semua manusia adalah makhluk fana<br>Ali adalah manusia</p></div>
+        <div class="contoh-item" onclick="isiContoh('Setiap yang memabukkan adalah haram','Tuak adalah arak yang memabukkan')"><strong>Hukum Islam</strong><p>Setiap yang memabukkan adalah haram<br>Tuak adalah arak yang memabukkan</p></div>
+        <div class="contoh-item" onclick="isiContoh('Setiap nabi adalah makshum','Muhammad adalah nabi')"><strong>Kenabian</strong><p>Setiap nabi adalah makshum<br>Muhammad adalah nabi</p></div>
+        <div class="contoh-item" onclick="isiContoh('Semua tumbuhan membutuhkan air','Pohon adalah tumbuhan')"><strong>Tumbuhan</strong><p>Semua tumbuhan membutuhkan air<br>Pohon adalah tumbuhan</p></div>
+        <div class="contoh-item" onclick="isiContoh('Semua hewan memerlukan makanan','Kucing adalah hewan')"><strong>Dunia Hewan</strong><p>Semua hewan memerlukan makanan<br>Kucing adalah hewan</p></div>
+        <div class="contoh-item" onclick="isiContoh('Setiap besi akan memuai jika dipanaskan','Kunci adalah besi')"><strong>Ilmu Alam</strong><p>Setiap besi akan memuai jika dipanaskan<br>Kunci adalah besi</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ VALIDATOR ════════════════════════════════ -->
+<section id="validator" class="section">
+  <div class="page-header">
+    <h2 class="page-title">Validator Proposisi</h2>
+    <p class="page-desc">Ketik sebuah pernyataan — sistem akan mendeteksi jenis proposisinya</p>
+  </div>
+  <div class="tool-container">
+    <div class="tool-form">
+      <div class="form-group">
+        <label class="form-label">Masukkan Pernyataan</label>
+        <textarea id="inputProposisi" class="form-textarea"
+          placeholder="Contoh pernyataan yang dapat dideteksi:&#10;&#8226; Semua manusia membutuhkan makan.&#10;&#8226; Tidak ada manusia yang hidup abadi.&#10;&#8226; Sebagian hewan dapat terbang.&#10;&#8226; Sebagian burung tidak dapat terbang." rows="3"></textarea>
+      </div>
+      <div class="form-actions">
+        <button class="btn-primary" onclick="validasiProposisi()">Deteksi Jenis Proposisi</button>
+        <button class="btn-ghost" onclick="resetValidator()">Reset</button>
+      </div>
+    </div>
+    <div id="hasilValidator" class="hasil-box hidden">
+      <div class="hasil-header"><span id="valIcon" class="hasil-icon"></span><span id="valLabel" class="hasil-label"></span></div>
+      <div id="valTeks" class="hasil-teks"></div>
+      <div id="valDetail" class="hasil-detail"></div>
+    </div>
+    <div class="tipe-reference">
+      <h4 class="contoh-title">Panduan Kata Kunci Pendeteksi Jenis Proposisi:</h4>
+      <div class="tipe-grid">
+        <div class="tipe-ref tipe-a"><span class="tipe-sym">A</span><div><strong>Kulliyyah Mujibah</strong><br><small>Dimulai dengan: semua, setiap, seluruh + kalimat positif.</small></div></div>
+        <div class="tipe-ref tipe-e"><span class="tipe-sym">E</span><div><strong>Kulliyyah Salibah</strong><br><small>Dimulai dengan: tidak ada, tiada, tak satu pun.</small></div></div>
+        <div class="tipe-ref tipe-i"><span class="tipe-sym">I</span><div><strong>Juz'iyyah Mujibah</strong><br><small>Dimulai dengan: sebagian, beberapa, ada yang + kalimat positif.</small></div></div>
+        <div class="tipe-ref tipe-o"><span class="tipe-sym">O</span><div><strong>Juz'iyyah Salibah</strong><br><small>Dimulai dengan: sebagian/beberapa + mengandung kata tidak/bukan.</small></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ KUIS ═════════════════════════════════════ -->
+<section id="kuis" class="section">
+  <div class="page-header">
+    <h2 class="page-title">Kuis Ilmu Mantiq</h2>
+    <p class="page-desc">10 soal pilihan ganda untuk menguji pemahaman Anda</p>
+  </div>
+
+  <div id="kuisStart" class="kuis-screen">
+    <div class="kuis-intro">
+      <div class="kuis-intro-icon">&#127942;</div>
+      <h3>Siap Mengerjakan Kuis?</h3>
+      <p>Kuis ini terdiri dari <strong>10 soal</strong> pilihan ganda yang menguji pemahaman Anda tentang Ilmu Mantiq. Tidak ada batas waktu, jadi bacalah setiap soal dengan saksama.</p>
+      <button class="btn-primary btn-lg" onclick="mulaiKuis()">Mulai Kuis</button>
+    </div>
+  </div>
+
+  <div id="kuisSoal" class="kuis-screen hidden">
+    <div class="kuis-progress-bar"><div id="progressFill" class="kuis-progress-fill"></div></div>
+    <div class="kuis-meta">
+      <span id="nomorSoalLabel" class="soal-nomor">Soal 1 dari 10</span>
+      <span id="skorSementara" class="skor-sementara">Skor: 0</span>
+    </div>
+    <div class="kuis-soal-card">
+      <p id="pertanyaan" class="pertanyaan-teks"></p>
+      <div id="pilihanContainer" class="pilihan-grid"></div>
+      <div id="feedbackBox" class="feedback-box hidden"></div>
+      <button id="nextBtn" class="btn-primary btn-next hidden" onclick="soalBerikutnya()">Soal Berikutnya &#8594;</button>
+    </div>
+  </div>
+
+  <div id="kuisHasil" class="kuis-screen hidden">
+    <div class="hasil-kuis-card">
+      <div id="hasilEmoji" class="hasil-emoji"></div>
+      <h3 id="hasilPredikat" class="hasil-predikat"></h3>
+      <div id="hasilSkorBesar" class="hasil-skor-besar"></div>
+      <p id="hasilPesan" class="hasil-pesan"></p>
+      <div id="hasilRingkasan" class="hasil-ringkasan"></div>
+      <div class="hasil-buttons">
+        <button class="btn-primary" onclick="ulangiKuis()">Ulangi Kuis</button>
+        <button class="btn-secondary" onclick="navigateTo('materi')">Kembali ke Materi</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ══ FOOTER ═══════════════════════════════════ -->
+<footer class="footer">
+  <div class="footer-left">MantiqApp &#169; 2026 &#8212; Tugas Mata Kuliah Kapita Selekta</div>
+  <div class="footer-divider"></div>
+  <div class="footer-right">
+    <span class="footer-sumber-label">Referensi:</span>
+    <p>Ilmu Mantiq: Sebuah Metode Berpikir Logis &#8212; Dr. KH. Nawawi, M.Ag., CM.<br>
+    Penerbit Litnus, Malang, 2023 | ISBN: 978-623-8227-72-3</p>
+  </div>
+</footer>
+
+<script src="js/app.js"></script>
+<script src="js/silogisme.js"></script>
+<script src="js/kuis.js"></script>
+
+</body>
+</html>
